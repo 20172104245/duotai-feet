@@ -12,7 +12,7 @@ protected:
 public:
 
 	CFeet();
-	int setCFeet(int f);
+	int setfeet(int f);
 	int setinches(int i);
 	void display();
 	~CFeet();
@@ -25,14 +25,16 @@ CFeet::CFeet()
 	inches = 0;
 	cout << "基类默认构造函数" << feet << "英尺" << inches << "英寸" << endl;
 }
-int CFeet::setCFeet(int f)
+int CFeet::setfeet(int f)
 {
 	feet = f;
 	cout << "基类构造函数" << feet << "英尺"  << endl;
+	return feet;
 }int CFeet::setinches(int i)
 {
 	inches = i;
 	cout << inches << "英寸" << endl;
+	return inches;
 }
 void CFeet::display()
 {
@@ -76,7 +78,7 @@ int main()
 	/*CMyfeet ai(3, 6);
 	ai.display();*/
 	p = new CMyfeet;
-	p->setCFeet(3);
+	p->setfeet(3);
 	p->setinches(6);
 	p->display();
 	p->~CFeet();
